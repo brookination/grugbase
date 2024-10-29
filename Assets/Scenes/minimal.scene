@@ -114,6 +114,12 @@
       "Name": "Map",
       "Position": "734.5449,4.423492,260.9708",
       "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapNetworking",
+          "__guid": "ad8a577a-d6cc-4b84-9d3d-72a3a8e7de6a"
+        }
+      ],
       "Children": [
         {
           "__guid": "1ac5f913-741f-47f5-bc99-89be2a7f1f96",
@@ -1373,14 +1379,40 @@
               "Enabled": true,
               "Components": [
                 {
-                  "__type": "Sandbox.Prop",
-                  "__guid": "fb1d6321-f5f1-460f-91ac-a78a06610ebb",
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "cc135f57-0797-428c-8a6a-48f663842248",
                   "BodyGroups": 18446744073709551615,
-                  "Health": 0,
-                  "IsStatic": false,
                   "Model": "models/citizen_props/chair03.vmdl",
-                  "StartAsleep": false,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
                   "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "e3d84a32-1f26-4b1d-982a-29f0e35c1f1b",
+                  "IsTrigger": false,
+                  "Model": "models/citizen_props/chair03.vmdl",
+                  "Static": false,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "Sandbox.Rigidbody",
+                  "__guid": "85e7ddbf-338f-4b89-9d3a-cdbe70834571",
+                  "AngularDamping": 0,
+                  "Gravity": true,
+                  "LinearDamping": 0,
+                  "Locking": {},
+                  "MassCenterOverride": "0,0,0",
+                  "MassOverride": 0,
+                  "MotionEnabled": true,
+                  "OverrideMassCenter": false,
+                  "RigidbodyFlags": 0,
+                  "StartAsleep": false
                 }
               ]
             },
@@ -1656,6 +1688,55 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "__guid": "bc73e3fc-7cd4-4f09-b098-72159613174b",
+      "Flags": 0,
+      "Name": "chair01",
+      "Position": "1088,416,224",
+      "Scale": "2.4,2.4,2.4",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "NetworkOrphaned": 1,
+      "OwnerTransfer": 2,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "15b4ff0e-d2ef-4b7f-b2f5-54a802dbbf5c",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/citizen_props/chair01.vmdl",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "c2001f05-4da0-49ce-9bec-2e9e60ba14f2",
+          "IsTrigger": false,
+          "Model": "models/citizen_props/chair01.vmdl",
+          "Static": false,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "bd633b3d-648d-413d-9503-39f9db2f9124",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassCenterOverride": "0,0,0",
+          "MassOverride": 0,
+          "MotionEnabled": true,
+          "OverrideMassCenter": false,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ]
     }
