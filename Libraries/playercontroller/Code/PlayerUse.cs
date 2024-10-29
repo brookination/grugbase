@@ -90,7 +90,7 @@ public sealed class PlayerUse : Component
 
 	private void StartCarry( Rigidbody rb )
 	{
-		if ( !rb.Network.TakeOwnership() )
+		if ( rb.Network.Owner != Player.Network.Owner )
 			return;
 
 		carrying = rb;
