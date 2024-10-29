@@ -45,7 +45,7 @@
 
         MoveSlot( (int)Input.MouseWheel.y );
 
-        if ( Input.Down( "SlotNext" ) ) MoveSlot( 1 );
+        if ( Input.Pressed( "SlotNext" ) ) MoveSlot( 1 );
         if ( Input.Pressed( "SlotPrev" ) ) MoveSlot( -1 );
 
         if ( Input.Pressed( "Slot1" ) ) IterateSlot( 0 );
