@@ -1598,6 +1598,35 @@
           "Enabled": true,
           "Children": [
             {
+              "__guid": "687cebb0-dc35-4ad7-a1c5-2c1513d2ae5f",
+              "Flags": 0,
+              "Name": "Envmap Probe (1)",
+              "Position": "65.45508,539.5765,-68.97079",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.EnvmapProbe",
+                  "__guid": "c6cbc105-ccfb-47d0-a4cd-df0673ed1328",
+                  "Texture": "textures/cubemaps/default2.vtex",
+                  "Bounds": {
+                    "Mins": "-813.0998,-353.6999,-72.90002",
+                    "Maxs": "356.6002,329.8,323.7"
+                  },
+                  "DelayBetweenUpdates": 0.1,
+                  "Feathering": 0.02,
+                  "FrameInterval": 5,
+                  "MaxDistance": 512,
+                  "MultiBounce": false,
+                  "Projection": "Box",
+                  "RenderDynamically": true,
+                  "TintColor": "1,1,1,1",
+                  "UpdateStrategy": "OnEnabled",
+                  "ZFar": 4096,
+                  "ZNear": 16
+                }
+              ]
+            },
+            {
               "__guid": "23de20d7-a698-45da-a0e3-c715f871ff22",
               "Flags": 0,
               "Name": "Envmap Probe",
