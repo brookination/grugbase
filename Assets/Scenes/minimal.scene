@@ -109,29 +109,299 @@
       ]
     },
     {
-      "__guid": "c2e2b2e8-62e8-4ef3-8336-002a3a68f88e",
+      "__guid": "d689f96f-406e-4f3a-ac7a-2021c8cfef3d",
       "Flags": 0,
-      "Name": "Map Loader",
-      "Position": "22.10468,10.23383,11.85129",
+      "Name": "Box",
+      "Position": "825.3552,0,192",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.MapInstance",
-          "__guid": "053b9354-3f9b-4cbf-837b-932a5a04f3ae",
-          "__version": 1,
-          "EnableCollision": true,
-          "MapName": "facepunch.datacore",
-          "NoOrigin": true,
-          "OnMapLoaded": null,
-          "OnMapUnloaded": null,
-          "UseMapFromLaunch": true
-        },
-        {
-          "__type": "MapPlayerSpawner",
-          "__guid": "7b313637-4f48-4bd3-ae24-18d6389d45bd"
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "963f2639-bb9c-425b-b3e4-10e231a7b023",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "320,432,-64",
+              "-320,432,-64",
+              "-320,-432,-64",
+              "320,-432,-64",
+              "320,-432,320",
+              "-320,-432,320",
+              "-320,432,320",
+              "320,432,320"
+            ],
+            "TextureCoord": [
+              "-2.5,-3.375",
+              "2.5,0.5",
+              "-2.5,3.375",
+              "3.375,0.5",
+              "2.5,3.375",
+              "2.5,0.5",
+              "2.5,-3.375",
+              "3.375,0.5",
+              "-2.5,3.375",
+              "-2.5,-2.5",
+              "-2.5,-3.375",
+              "-3.375,-2.5",
+              "2.5,-3.375",
+              "-2.5,-2.5",
+              "2.5,3.375",
+              "-3.375,-2.5",
+              "-3.375,0.5",
+              "2.5,-2.5",
+              "3.375,-2.5",
+              "-2.5,0.5",
+              "3.375,-2.5",
+              "-2.5,0.5",
+              "-3.375,0.5",
+              "2.5,-2.5"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,-0,0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,-0",
+              "-0,-1,-0",
+              "0,0,-1",
+              "0,0,-1",
+              "0,0,-1",
+              "0,0,-1"
+            ],
+            "TextureScale": [
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.2500001,0.25",
+              "0.2500001,0.25"
+            ],
+            "TextureOffset": [
+              "282.5796,0",
+              "282.5796,0",
+              "0,256",
+              "0,256",
+              "229.4202,256",
+              "282.5798,256"
+            ],
+            "MaterialIndex": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat",
+              "materials/concrete floor 01.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true,
+          "Surface": "surfaces/concrete.surface",
+          "SurfaceVelocity": "0,0,0"
         }
-      ],
-      "Children": []
+      ]
+    },
+    {
+      "__guid": "18e292ac-7c2d-4303-90b4-02f9fdc17fde",
+      "Flags": 0,
+      "Name": "Point Light",
+      "Position": "825.3552,0,448",
+      "Tags": "light_point,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PointLight",
+          "__guid": "c90f6a89-9ab3-4c84-a410-d4cede0ab244",
+          "Attenuation": 0.36,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 552.30035,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "__guid": "09846169-5abe-4024-921c-5066235a9fd2",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "1030.645,45.19107,128",
+      "Rotation": "0,0,0.9583226,0.2856883",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "396fa95f-e731-48b3-b7dc-02d12a6983de",
+          "Color": "0.8902,0.31765,0.05098,1"
+        }
+      ]
+    },
+    {
+      "__guid": "ec50e463-06e7-4d9a-9b34-544480315d64",
+      "Flags": 0,
+      "Name": "Box",
+      "Position": "896,-16,144.0002",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MeshComponent",
+          "__guid": "2bf20f9d-b6b2-4985-b8e5-dd69b45a5877",
+          "Collision": "Mesh",
+          "Color": "1,1,1,1",
+          "HideInGame": false,
+          "IsTrigger": false,
+          "Mesh": {
+            "Topology": "H4sIAAAAAAAACl2Qiw6CUAxDh1flgg/wAfr/X2pP0iWLJA25W9t16xHxFc4C30E4\u002Bt2FWbgKd2Ew4NTvIZxcb9ZH4b5db\u002Bb9z/oUzVh8m7lPc9FOzjRYQ8ZXyXxxXvrw4e72wvtWdoEPdzMXj8We9OHDXcvO7EqdN396eKaeLHjkLciePeYxi4z0mMFtMisablFvRXZ2Tj158KQOF78f9WSROMQBAAA=",
+            "Positions": [
+              "-32,-144,16",
+              "32,-144,16",
+              "32,144,16",
+              "-32,144,16",
+              "-32,144,-16",
+              "32,144,-16",
+              "32,-144,-16",
+              "-32,-144,-16"
+            ],
+            "TextureCoord": [
+              "0.25,1.125",
+              "-0.25,-0.125",
+              "0.25,-1.125",
+              "-1.125,-0.125",
+              "-0.25,-1.125",
+              "-0.25,-0.125",
+              "-0.25,1.125",
+              "-1.125,-0.125",
+              "0.25,-1.125",
+              "0.25,0.125",
+              "0.25,1.125",
+              "1.125,0.125",
+              "-0.25,1.125",
+              "0.25,0.125",
+              "-0.25,-1.125",
+              "1.125,0.125",
+              "1.125,-0.125",
+              "-0.25,0.125",
+              "-1.125,0.125",
+              "0.25,-0.125",
+              "-1.125,0.125",
+              "0.25,-0.125",
+              "1.125,-0.125",
+              "-0.25,0.125"
+            ],
+            "TextureUAxis": [
+              "1,0,0",
+              "1,0,-0",
+              "0,-1,0",
+              "0,1,0",
+              "-1,0,0",
+              "1,-0,0"
+            ],
+            "TextureVAxis": [
+              "0,-1,0",
+              "0,-1,0",
+              "0,0,-1",
+              "-0,0,-1",
+              "0,0,-1",
+              "-0,0,-1"
+            ],
+            "TextureScale": [
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25",
+              "0.25,0.25"
+            ],
+            "TextureOffset": [
+              "0,448",
+              "0,448",
+              "448,64.00085",
+              "64,64.00085",
+              "0,64.00085",
+              "0,64.00085"
+            ],
+            "MaterialIndex": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "EdgeFlags": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "Materials": [
+              "materials/dev/reflectivity_30.vmat",
+              "materials/generic/carpet_b.vmat"
+            ]
+          },
+          "SmoothingAngle": 40,
+          "Static": true,
+          "Surface": "surfaces/carpet.surface",
+          "SurfaceVelocity": "0,0,0"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -162,6 +432,9 @@
   "ResourceVersion": 2,
   "Title": "minimal",
   "Description": null,
-  "__references": [],
+  "__references": [
+    "facepunch.carpet_b#18623",
+    "gbonn.concretefloor01#49285"
+  ],
   "__version": 2
 }
