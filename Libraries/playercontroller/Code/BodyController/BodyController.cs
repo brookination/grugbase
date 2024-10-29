@@ -172,6 +172,8 @@ public sealed partial class BodyController : Component, IScenePhysicsEvents, Com
 	/// </summary>
 	public void Jump( Vector3 velocity )
 	{
+		IPlayerEvent.Post( e => e.OnJump( GameObject.GetComponent<Player>(  ) ) );
+		
 		PreventGrounding( 0.2f );
 
 		var currentVel = Body.Velocity;
