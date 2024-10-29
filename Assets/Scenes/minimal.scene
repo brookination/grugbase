@@ -1446,6 +1446,25 @@
       ]
     },
     {
+      "__guid": "a59b17f8-f3f3-4f8a-8dc7-4b120015256a",
+      "Flags": 0,
+      "Name": "crate01 (5)",
+      "Position": "704,608,416",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "c20b3046-46e0-4bca-98ad-8e819e0073b2",
+          "BodyGroups": 18446744073709551615,
+          "Health": 30,
+          "IsStatic": false,
+          "Model": "models/citizen_props/crate01.vmdl",
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
+        }
+      ]
+    },
+    {
       "__guid": "940a3790-85d8-4ad3-abb0-54758c20a7c7",
       "Flags": 0,
       "Name": "crate01 (4)",
