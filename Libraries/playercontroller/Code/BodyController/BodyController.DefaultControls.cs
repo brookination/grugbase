@@ -314,7 +314,7 @@ public sealed partial class BodyController : Component
 
 	void InputMove()
 	{
-		var rot = EyeAngles.ToRotation();
+		var rot = EyeAngles.WithPitch( 0 ).ToRotation();
 
 		WishVelocity = rot * Input.AnalogMove;
 
@@ -605,6 +605,7 @@ public sealed partial class BodyController : Component
 
 			return;
 		}
+		
 
 		var handle = GameObject.PlaySound( soundEvent, 0 );
 		handle.TargetMixer = FootstepMixer.GetOrDefault();
