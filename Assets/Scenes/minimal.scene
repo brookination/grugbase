@@ -117,7 +117,10 @@
       "Components": [
         {
           "__type": "MapNetworking",
-          "__guid": "ad8a577a-d6cc-4b84-9d3d-72a3a8e7de6a"
+          "__guid": "599735ee-c04a-41a3-9df3-b3e6383aa77f",
+          "RayLength": 20,
+          "SphereRadius": 100,
+          "SpinVelocity": "0,20,0"
         }
       ],
       "Children": [
@@ -1548,6 +1551,28 @@
                   "Tint": "1,1,1,1"
                 }
               ]
+            },
+            {
+              "__guid": "11265316-49a4-4c37-88fb-cd79972db0e0",
+              "Flags": 0,
+              "Name": "chippacket01",
+              "Position": "321.4551,411.5765,-132.8537",
+              "Rotation": "0,0,-0.5,0.8660254",
+              "Enabled": true,
+              "NetworkOrphaned": 1,
+              "OwnerTransfer": 0,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "25480dcc-91b6-4c9e-90a0-ef958f0039b5",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 0,
+                  "IsStatic": false,
+                  "Model": "models/citizen_props/chippacket01.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
             }
           ]
         },
@@ -1688,34 +1713,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "__guid": "11265316-49a4-4c37-88fb-cd79972db0e0",
-      "Flags": 0,
-      "Name": "chippacket01",
-      "Position": "1056,416,128.1171",
-      "Enabled": true,
-      "NetworkMode": 1,
-      "NetworkOrphaned": 1,
-      "OwnerTransfer": 0,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "25480dcc-91b6-4c9e-90a0-ef958f0039b5",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/citizen_props/chippacket01.vmdl",
-          "StartAsleep": false,
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "PropNetworking",
-          "__guid": "854d1700-02cf-467c-afb3-bb93a3897b89",
-          "SphereRadius": 100,
-          "SpinVelocity": "0,20,0"
         }
       ]
     }
