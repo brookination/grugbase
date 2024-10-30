@@ -14,6 +14,7 @@ public sealed class PlayerInventory : Component, IPlayerEvent
 	{
 		Pickup( "weapons/hands.prefab" );
 		Pickup( "weapons/camera.prefab" );
+		Pickup( "weapons/pistol.prefab" );
 	}
 
 	void Pickup( string prefabName )
