@@ -1,7 +1,16 @@
 using Sandbox;
 
+
+[Group("Grugbase/Networking"), Icon("settings_input_antenna")]
 public sealed class MapNetworking : Component
 {
+	[Property, DefaultValue(100f), Description("How big the search radius for the player is")] public float SphereRadius = 100f;
+	
+	[Property, DefaultValue(20f), Description("How long should we cast the sphere??? I don't really understand this...")] public float RayLength = 20f;
+	
+	[Property, Description("How fast should the ray spin")] public Angles SpinVelocity = new Angles( 0, 20f, 0 );
+
+	
 	protected override void OnAwake()
 	{
 		var props = GameObject.GetComponentsInChildren<Prop>().ToArray();
@@ -12,42 +21,53 @@ public sealed class MapNetworking : Component
 			prop.GameObject.SetParent( Scene );
 			prop.Tags.Add( "dynamic" );
 			prop.GameObject.NetworkMode = NetworkMode.Object;
+			prop.GameObject.Network.SetOrphanedMode( NetworkOrphaned.ClearOwner );
+			var networking = prop.AddComponent<PropNetworking>();
+			
+			networking.SphereRadius = SphereRadius;
+			networking.RayLength = RayLength;
+			networking.SpinVelocity = SpinVelocity;
 		}
 		
 		
 	}
 }
 
+[Group("Grugbase/Networking"),  Icon("leak_add")]
 public sealed class PropNetworking : Component
 {
 	/// <summary>
 	/// How big the search radius for the player should be
 	/// </summary>
-	[Property, DefaultValue(100f)] public float SphereRadius = 100f;
+	[Property, DefaultValue(100f), Description("How big the search radius for the player is")] public float SphereRadius = 100f;
 	
-	[Property, DefaultValue(20f)] public float RayLength = 20f;
+	[Property, DefaultValue(20f), Description("How long should we cast the sphere??? I don't really understand this...")] public float RayLength = 20f;
 	
 	/// <summary>
 	/// How fast the ray should spin
 	/// </summary>
-	[Property] public Angles SpinVelocity = new Angles( 0, 20f, 0 );
+	[Property, Description("How fast should the ray spin")] public Angles SpinVelocity = new Angles( 0, 20f, 0 );
 
 	private Angles CurrentAngles;
 
 	protected override void OnFixedUpdate()
 	{
-
+		// Spin a lil bit
 		CurrentAngles += SpinVelocity * Time.Delta;
 		
-
+		// Trace a sphere
 		var tr = Scene.Trace.Sphere( SphereRadius, WorldPosition, WorldPosition + CurrentAngles.Forward * RayLength )
 			.Run();
 
 		if ( tr.Hit )
 		{
 			var player = tr.GameObject.GetComponent<Player>();
+			// If the GameObject isn't a player, return
 			if ( player == null ) return;
+			// Don't do anything if we own it already
+			if (player.Network.Owner == GameObject.Network.Owner) return;
 
+			// Assign ownership
 			GameObject.Network.AssignOwnership( player.GameObject.Network.Owner );
 		}
 	}
