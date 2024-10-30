@@ -10,7 +10,28 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 
 			if ( trace.Hit )
 			{
-				Log.Info( "Woah" );
+				DebugOverlay.Line( trace.StartPosition, trace.HitPosition, Color.Magenta, duration: 2000f );
+				
+				// do a bullet hole
+				var decalObj = new GameObject();
+
+				decalObj.WorldTransform = new Transform( trace.HitPosition + trace.Normal * 2.0f, Rotation.LookAt( -trace.Normal, Vector3.Random ));
+				
+				decalObj.SetParent( trace.GameObject );
+				
+				var decalRenderer = decalObj.AddComponent<DecalRenderer>();
+				
+				
+
+				var decal = Material.Load( WeaponEffects.GetDecalFromSurface( trace.Surface.ResourcePath ));
+				
+				decalRenderer.Size = new Vector3( decalRenderer.Size.x/4, decalRenderer.Size.y/4, 16 );
+				
+				decalRenderer.Material = decal;
+
+
+
+
 			}
 		}
 	}
