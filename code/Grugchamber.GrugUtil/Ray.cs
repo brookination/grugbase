@@ -6,11 +6,10 @@ public static class Rays
 	///     Trace a ray from the active scene's main camera's center.
 	/// </summary>
 	/// <returns></returns>
-	public static SceneTraceResult TraceFromCenter()
+	public static SceneTrace TraceFromCenter()
 	{
 		return Game.ActiveScene.Trace.Ray(
-			Game.ActiveScene.Camera.ScreenPixelToRay( new Vector2( Screen.Width / 2, Screen.Height / 2 ) ), 1000f )
-			.Run();
+			Game.ActiveScene.Camera.ScreenPixelToRay( new Vector2( Screen.Width / 2, Screen.Height / 2 ) ), 1000f );
 
 	}
 }
