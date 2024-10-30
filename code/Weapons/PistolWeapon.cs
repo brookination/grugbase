@@ -6,29 +6,33 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 	{
 		if ( Input.Pressed( "attack1" ) )
 		{
-			var trace = Rays.TraceFromCenter();
+			var tr = Rays.TraceFromCenter();
 
-			if ( trace.Hit )
+			if ( tr.Hit )
 			{
-				DebugOverlay.Line( trace.StartPosition, trace.HitPosition, Color.Magenta, duration: 2000f );
+				DebugOverlay.Line( tr.StartPosition, tr.HitPosition, Color.Magenta, duration: 2000f );
+				
+				
+				
+				
 				
 				// do a bullet hole
 				var decalObj = new GameObject();
 
-				decalObj.WorldTransform = new Transform( trace.HitPosition + trace.Normal * 2.0f, Rotation.LookAt( -trace.Normal, Vector3.Random ));
+				decalObj.WorldTransform = new Transform( tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt( -tr.Normal, Vector3.Random ));
 				
-				decalObj.SetParent( trace.GameObject );
+				decalObj.SetParent( tr.GameObject );
 				
 				var decalRenderer = decalObj.AddComponent<DecalRenderer>();
 				
 				decalObj.Tags.Add( "bullethole" );
 
-				var decal = Material.Load( WeaponEffects.GetDecalFromSurface( trace.Surface.ResourcePath ));
+				var decal = Material.Load( WeaponEffects.GetDecalFromSurface( tr.Surface.ResourcePath ));
 				
 				decalRenderer.Size = new Vector3( decalRenderer.Size.x/4, decalRenderer.Size.y/4, 16 );
 				
 				decalRenderer.Material = decal;
-
+				
 
 
 
