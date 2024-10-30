@@ -1,0 +1,87 @@
+{
+  "RootObject": {
+    "__guid": "e369307c-1054-4c5d-a210-edcf35cc8509",
+    "Flags": 0,
+    "Name": "pistol",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "PistolWeapon",
+        "__guid": "359ac6d4-3632-4bc9-bf4c-05b62837652a",
+        "BoneOffset": {
+          "UniformScale": 1,
+          "IsValid": true,
+          "ForwardRay": {
+            "Forward": "1,0,0"
+          },
+          "Scale": "1,1,1",
+          "Rotation": "0,0,0,1"
+        },
+        "DisplayIcon": "photo_camera",
+        "DisplayName": "Pistol",
+        "HoldType": "Pistol",
+        "InventoryOrder": 0,
+        "InventorySlot": 1,
+        "ParentBone": "hold_r"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "716a02c1-3073-4aa7-ae2a-cfc21424b213",
+        "Flags": 0,
+        "Name": "Object",
+        "Scale": "0.2999999,0.3,0.3",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d4187027-a2f8-433b-b7c9-3dfbe70ff89f",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/sbox_props/concrete_barrier/concrete_barrier.vmdl",
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.concrete_barrier#33663"
+  ],
+  "__version": 1
+}
