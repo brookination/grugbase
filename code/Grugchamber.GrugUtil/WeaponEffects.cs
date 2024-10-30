@@ -3,7 +3,7 @@
 public static class WeaponEffects
 {
 	/// <summary>
-	///     The dictionary of decal effects, the key is the surface resource path, the value is the decal path.
+	///     The dictionary of decal effects, the key is a surface resource path, the value is the decal path.
 	/// </summary>
 	public static readonly Dictionary<string, string> DecalEffectsKey = new()
 	{
