@@ -16,25 +16,5 @@
 		}
 	}
 
-	public static class WeaponEffects
-	{
-
-		public static readonly Dictionary<string, string> DecalEffectsKey = new Dictionary<string, string>()
-		{
-			{ "everything", "materials/decals/bullethole.vmat" },
-			{ "surfaces/flesh.surface", "materials/decals/flesh/flesh1.vmat" }
-		};
-
-		public static string GetDecalFromSurface( string surfacePath )
-		{
-			if ( DecalEffectsKey.TryGetValue( surfacePath, out var decalPath ) )
-			{
-				return decalPath;
-			}
-
-			// If no specific surface is found, fall back to "everything"
-			return DecalEffectsKey["everything"];
-		}
-	}
 }
 
