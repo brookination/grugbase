@@ -33,6 +33,7 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				decalRenderer.Size = new Vector3( decalRenderer.Size.x/4, decalRenderer.Size.y/4, 16 );
 				
 				decalRenderer.Material = decal;
+				decalObj.AddComponent<BulletHole>();
 
 				if ( tr.Body.IsValid() )
 				{
