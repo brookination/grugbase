@@ -21,7 +21,7 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 				var decalRenderer = decalObj.AddComponent<DecalRenderer>();
 				
-				
+				decalObj.Tags.Add( "bullethole" );
 
 				var decal = Material.Load( WeaponEffects.GetDecalFromSurface( trace.Surface.ResourcePath ));
 				
