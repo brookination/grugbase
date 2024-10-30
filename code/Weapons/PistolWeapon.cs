@@ -7,7 +7,7 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 	{
 		if ( Input.Pressed( "attack1" ) )
 		{
-			var tr = Rays.TraceFromCenter().IgnoreGameObject( GameObject.Parent ).Run();
+			var tr = Rays.TraceFromCenter().IgnoreGameObject( GameObject.GetComponentsInParent<Player>(  ).FirstOrDefault().GameObject ).Run();
 
 			if ( tr.Hit )
 			{
