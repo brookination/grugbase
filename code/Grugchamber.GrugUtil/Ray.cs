@@ -8,9 +8,9 @@ public static class Rays
 	/// <returns></returns>
 	public static SceneTraceResult TraceFromCenter()
 	{
-		var ray = Game.ActiveScene.Trace.Ray(
-			Game.ActiveScene.Camera.ScreenPixelToRay( new Vector2( Screen.Width / 2, Screen.Height / 2 ) ), 1000f );
+		return Game.ActiveScene.Trace.Ray(
+			Game.ActiveScene.Camera.ScreenPixelToRay( new Vector2( Screen.Width / 2, Screen.Height / 2 ) ), 1000f )
+			.Run();
 
-		return ray.Run();
 	}
 }
