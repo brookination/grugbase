@@ -27,8 +27,21 @@ CrosshairTooltip
 .inner .icon
 {
 	position: absolute;
-	font-family: Material Icons;
-	font-size: 32px;
+	
+	
+	width: 15%;
+	height: 20%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+	Image {
+		color: #f80;
+		height: 160%;
+		aspect-ratio: 1/1;
+	}
 }
 
 .inner .title

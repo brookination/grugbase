@@ -5,7 +5,9 @@
 
 <root>
     <div class="inner">
-        <div class="icon">@Icon</div>
+	    <div class="icon">
+		    <Image Texture="@Icon" />
+	    </div>
         <div class="title">@Tooltip</div>
     </div>
 </root>
@@ -13,7 +15,7 @@
 @code
 {
 
-    public string Icon { get; set; }
+    public Texture Icon { get; set; }
     public string Tooltip { get; set; }
 
     /// <summary>
@@ -42,7 +44,7 @@
         if (use.Interative)
         {
             Tooltip = use.Tooltip;
-            Icon = use.TooltipIcon;
+            Icon = Input.GetGlyph( "use", InputGlyphSize.Small, true );
         }
     }
 }
