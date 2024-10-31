@@ -43,18 +43,22 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			decalObj.AddComponent<BulletHole>();
 			// sound
 			SoundEvent bullet = ResourceLibrary.Get<SoundEvent>( tr.Surface.Sounds.Bullet );
-
+			SoundEvent pistol_shoot = ResourceLibrary.Get<SoundEvent>( "audio/weapons/pistol_shoot.sound");
 			if ( bullet != null )
 			{
 				var handle = decalObj.PlaySound( bullet, 0 );
 				handle.TargetMixer = Mixer.FindMixerByName( "Game" );
 				handle.Volume = 0.5f;
-					
+				
 			}
 			else
 			{
 				Log.Warning( $"There was no bullet SFX for {tr.Surface.Sounds.Bullet}!" );
 			}
+
+			SoundHandle shootHandle = GameObject.PlaySound( pistol_shoot, 0 );
+			shootHandle.TargetMixer = Mixer.FindMixerByName( "Game" );
+			
 
 			// apply force
 			if ( tr.Body.IsValid() )
