@@ -46,10 +46,14 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			SoundEvent pistol_shoot = ResourceLibrary.Get<SoundEvent>( "audio/weapons/pistol_shoot.sound");
 			if ( bullet != null )
 			{
-				var handle = decalObj.PlaySound( bullet, 0 );
-				handle.TargetMixer = Mixer.FindMixerByName( "Game" );
-				handle.Volume = 0.5f;
-				
+				Task.Delay( (int)tr.StartPosition.Distance( tr.HitPosition )/1000 ).ContinueWith( ( task ) =>
+				{
+
+					var handle = decalObj.PlaySound( bullet, 0 );
+					handle.TargetMixer = Mixer.FindMixerByName( "Game" );
+					handle.Volume = 0.5f;
+				} );
+
 			}
 			else
 			{
