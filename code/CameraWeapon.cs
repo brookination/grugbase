@@ -102,12 +102,14 @@ public class CameraWeapon : BaseWeapon, IPlayerEvent
 		{
 			dof.BlurSize = 200;
 			dof.FrontBlur = true;
+			
 
 			var tr = Scene.Trace.Ray( Scene.Camera.Transform.World.ForwardRay, 5000 )
 								.IgnoreGameObjectHierarchy( GameObject.Root )
 								.Run();
 
 			focusPoint = tr.EndPosition;
+			 dof.FocusRange = 1000;
 		}
 
 		dof.FocalDistance = Scene.Camera.WorldPosition.Distance( focusPoint ) + 32;
