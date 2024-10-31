@@ -3558,7 +3558,7 @@
               "Name": "Spot Light (6)",
               "Position": "-1758.545,-388.4235,315.0288",
               "Rotation": "0.5,0.4999999,-0.5,0.4999999",
-              "Tags": "light_spot,light",
+              "Tags": "light_spot",
               "Enabled": true,
               "Components": [
                 {
@@ -3581,7 +3581,7 @@
               "Name": "Spot Light (7)",
               "Position": "-1758.544,443.5764,315.0287",
               "Rotation": "0.5,0.4999999,-0.5,0.4999999",
-              "Tags": "light_spot,light",
+              "Tags": "light_spot",
               "Enabled": true,
               "Components": [
                 {
@@ -3604,7 +3604,7 @@
               "Name": "Spot Light (8)",
               "Position": "-1758.544,59.57641,315.0285",
               "Rotation": "0.5,0.4999999,-0.5,0.4999999",
-              "Tags": "light_spot,light",
+              "Tags": "light_spot",
               "Enabled": true,
               "Components": [
                 {
@@ -3627,7 +3627,7 @@
               "Name": "Spot Light (3)",
               "Position": "-1246.545,-388.4235,315.0287",
               "Rotation": "0.5,0.4999999,-0.5,0.4999999",
-              "Tags": "light_spot,light",
+              "Tags": "light_spot",
               "Enabled": true,
               "Components": [
                 {
@@ -3650,7 +3650,7 @@
               "Name": "Spot Light (4)",
               "Position": "-1246.544,443.5764,315.0285",
               "Rotation": "0.5,0.4999999,-0.5,0.4999999",
-              "Tags": "light_spot,light",
+              "Tags": "light_spot",
               "Enabled": true,
               "Components": [
                 {
@@ -3673,7 +3673,7 @@
               "Name": "Spot Light (5)",
               "Position": "-1246.544,59.57642,315.0284",
               "Rotation": "0.5,0.4999999,-0.5,0.4999999",
-              "Tags": "light_spot,light",
+              "Tags": "light_spot",
               "Enabled": true,
               "Components": [
                 {
@@ -3764,6 +3764,64 @@
                   "Bounds": {
                     "Mins": "-299.1005,-359.0006,-200",
                     "Maxs": "263.1996,1033.999,324.7"
+                  },
+                  "DelayBetweenUpdates": 0.1,
+                  "Feathering": 0.02,
+                  "FrameInterval": 5,
+                  "MaxDistance": 512,
+                  "MultiBounce": false,
+                  "Projection": "Box",
+                  "RenderDynamically": true,
+                  "TintColor": "1,1,1,1",
+                  "UpdateStrategy": "OnEnabled",
+                  "ZFar": 4096,
+                  "ZNear": 16
+                }
+              ]
+            },
+            {
+              "__guid": "70943544-a375-4015-9e54-04bec6e69725",
+              "Flags": 0,
+              "Name": "Envmap Probe (5)",
+              "Position": "-1502.545,123.5765,-68.97079",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.EnvmapProbe",
+                  "__guid": "7f61c3d9-3eca-4f7a-8414-aa8123ef190c",
+                  "Texture": "textures/cubemaps/default2.vtex",
+                  "Bounds": {
+                    "Mins": "-516.5005,-864.8004,-200",
+                    "Maxs": "565.5996,761.6,324.7"
+                  },
+                  "DelayBetweenUpdates": 0.1,
+                  "Feathering": 0.05,
+                  "FrameInterval": 5,
+                  "MaxDistance": 512,
+                  "MultiBounce": false,
+                  "Projection": "Box",
+                  "RenderDynamically": true,
+                  "TintColor": "1,1,1,1",
+                  "UpdateStrategy": "OnEnabled",
+                  "ZFar": 4096,
+                  "ZNear": 16
+                }
+              ]
+            },
+            {
+              "__guid": "9ccfaeda-f427-4592-9783-cff4c04b3c5e",
+              "Flags": 0,
+              "Name": "Envmap Probe (6)",
+              "Position": "-830.5449,539.5764,-68.97079",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.EnvmapProbe",
+                  "__guid": "07f7a2e9-e82d-4930-9ca9-2e8f98dd1436",
+                  "Texture": "textures/cubemaps/default2.vtex",
+                  "Bounds": {
+                    "Mins": "-299.1005,-478.2004,-200",
+                    "Maxs": "263.1996,478.2,324.7"
                   },
                   "DelayBetweenUpdates": 0.1,
                   "Feathering": 0.02,
