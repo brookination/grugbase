@@ -36,11 +36,17 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 			decalObj.Tags.Add( "bullethole" );
 
-			var decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() ).Decals.FirstOrDefault().Material;
-				
+			var decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() );
+			Log.Info( decal );
+			
+			if ( !decal.IsValid() )
+			{
+				decal = ResourceLibrary.Get<DecalDefinition>( "decals/bullethole.decal" );
+			}
+			
 			decalRenderer.Size = new Vector3( decalRenderer.Size.x/4, decalRenderer.Size.y/4, 16 );
 				
-			decalRenderer.Material = decal;
+			decalRenderer.Material = Game.Random.FromList( decal.Decals ).Material;
 			decalObj.AddComponent<BulletHole>();
 			// sound
 			SoundEvent bullet = ResourceLibrary.Get<SoundEvent>( tr.Surface.Sounds.Bullet );
