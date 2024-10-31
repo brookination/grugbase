@@ -25,6 +25,7 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 				
 			// do a bullet hole
+			// TODO: if we've hit a skinnedmodelrenderer, attach to the bone we've hit
 			var decalObj = new GameObject();
 
 			decalObj.WorldTransform = new Transform( tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt( -tr.Normal, Vector3.Random ));
@@ -35,7 +36,7 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 			decalObj.Tags.Add( "bullethole" );
 
-			var decal = Material.Load( WeaponEffects.GetDecalFromSurface( tr.Surface.ResourcePath ));
+			var decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() ).Decals.FirstOrDefault().Material;
 				
 			decalRenderer.Size = new Vector3( decalRenderer.Size.x/4, decalRenderer.Size.y/4, 16 );
 				
