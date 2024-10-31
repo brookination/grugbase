@@ -35,6 +35,7 @@ public sealed class PlayerInventory : Component, IPlayerEvent
 
 	public void SwitchWeapon( BaseWeapon weapon )
 	{
+		IPlayerEvent.Post( x => x.OnWeaponChanged( Player, weapon ) );
 		if ( ActiveWeapon.IsValid() )
 		{
 			ActiveWeapon.GameObject.Enabled = false;
