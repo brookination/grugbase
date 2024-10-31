@@ -17,6 +17,7 @@
           "Scale": "1,1,1",
           "Rotation": "0,0,0,1"
         },
+        "Damage": 20,
         "DisplayIcon": "photo_camera",
         "DisplayName": "Pistol",
         "HoldType": "Pistol",
