@@ -2,6 +2,21 @@
   "__guid": "cd285893-d0ab-4423-9b5f-9a94f46ce96c",
   "GameObjects": [
     {
+      "__guid": "35e37ca2-47a6-42e9-b71d-65de0fcf6d9d",
+      "Flags": 0,
+      "Name": "Scene Information",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SceneInformation",
+          "__guid": "a58aec4f-7d10-4438-bb8c-cfafcc96a074",
+          "Description": "",
+          "SceneTags": "",
+          "Title": "minimal"
+        }
+      ]
+    },
+    {
       "__guid": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
       "Flags": 0,
       "Name": "Camera",
@@ -90,6 +105,20 @@
           "Intensity": 0.51,
           "Roundness": 0,
           "Smoothness": 1
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "771e046c-93b6-4238-9dd1-79935927647e",
+          "Flags": 0,
+          "Name": "Viewmodel",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ViewmodelManager",
+              "__guid": "fbe8a24b-f8fa-4f2d-8ea7-c9a90558365a"
+            }
+          ]
         }
       ]
     },
@@ -201,6 +230,9 @@
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true,
+    "Metadata": {
+      "Title": "minimal"
+    },
     "NavMesh": {
       "Enabled": false,
       "IncludeStaticBodies": true,
@@ -214,10 +246,9 @@
       "IncludedBodies": ""
     }
   },
+  "ResourceVersion": 2,
   "Title": "minimal",
-  "Description": "",
-  "ResourceVersion": 1,
+  "Description": null,
   "__references": [],
-  "IsValid": true,
-  "__version": 1
+  "__version": 2
 }
