@@ -8,6 +8,7 @@
       {
         "__type": "ViewmodelController",
         "__guid": "1711ae41-8744-4176-8c47-06e817b299e8",
+        "__enabled": false,
         "Target": {
           "_type": "component",
           "component_id": "581a75a0-4621-4e6d-a8c0-09a9835c6ac6",
@@ -82,7 +83,7 @@
               "BloomLayer": false,
               "AfterUILayer": false
             },
-            "RenderType": "On",
+            "RenderType": "Off",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
           }

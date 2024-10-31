@@ -2,7 +2,7 @@
   "Title": "Grugbase",
   "Type": "game",
   "Org": "grugchamber",
-  "Ident": "grugbase",
+  "Ident": "grug_base",
   "Schema": 1,
   "IncludeSourceFiles": false,
   "Resources": null,

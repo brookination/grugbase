@@ -116,7 +116,8 @@
           "Components": [
             {
               "__type": "Sandbox.WeaponViewmodel",
-              "__guid": "aa289243-1fa9-4050-a413-780664707da6"
+              "__guid": "aa289243-1fa9-4050-a413-780664707da6",
+              "__enabled": false
             }
           ]
         }
