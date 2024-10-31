@@ -8,6 +8,7 @@
       {
         "__type": "PistolWeapon",
         "__guid": "359ac6d4-3632-4bc9-bf4c-05b62837652a",
+        "WeaponViewmodel": "weapons/pistol_viewmodel.prefab",
         "BoneOffset": {
           "UniformScale": 1,
           "IsValid": true,

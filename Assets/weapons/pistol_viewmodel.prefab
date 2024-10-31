@@ -1,0 +1,114 @@
+{
+  "RootObject": {
+    "__guid": "7e7fae3b-a18d-4df3-ae48-69f9324a1132",
+    "Flags": 0,
+    "Name": "pistol_viewmodel",
+    "Enabled": true,
+    "Children": [
+      {
+        "__guid": "8c7d2e58-6d84-4864-aa0f-3e720d10131d",
+        "Flags": 0,
+        "Name": "first_person_arms",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "63fbb175-e3b3-47ac-a1ac-09f31056cf33",
+            "BodyGroups": 53,
+            "BoneMergeTarget": {
+              "_type": "component",
+              "component_id": "581a75a0-4621-4e6d-a8c0-09a9835c6ac6",
+              "go": "af429e93-3671-4aeb-a3b3-a7944b602ff6",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "CreateBoneObjects": false,
+            "Model": "models/first_person/first_person_arms.vmdl",
+            "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      },
+      {
+        "__guid": "af429e93-3671-4aeb-a3b3-a7944b602ff6",
+        "Flags": 0,
+        "Name": "v_usp",
+        "Position": "0,0,0.03679655",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "581a75a0-4621-4e6d-a8c0-09a9835c6ac6",
+            "BodyGroups": 147,
+            "CreateBoneObjects": false,
+            "Model": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
+            "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          }
+        ]
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
+      "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
+      "TimeScale": 1,
+      "UseFixedUpdate": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.v_usp#74471"
+  ],
+  "__version": 1
+}
