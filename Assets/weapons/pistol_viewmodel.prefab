@@ -4,6 +4,18 @@
     "Flags": 0,
     "Name": "pistol_viewmodel",
     "Enabled": true,
+    "Components": [
+      {
+        "__type": "ViewmodelController",
+        "__guid": "1711ae41-8744-4176-8c47-06e817b299e8",
+        "Target": {
+          "_type": "component",
+          "component_id": "581a75a0-4621-4e6d-a8c0-09a9835c6ac6",
+          "go": "af429e93-3671-4aeb-a3b3-a7944b602ff6",
+          "component_type": "SkinnedModelRenderer"
+        }
+      }
+    ],
     "Children": [
       {
         "__guid": "8c7d2e58-6d84-4864-aa0f-3e720d10131d",

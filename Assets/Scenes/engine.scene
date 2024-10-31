@@ -115,8 +115,8 @@
           "Enabled": true,
           "Components": [
             {
-              "__type": "ViewmodelManager",
-              "__guid": "fbe8a24b-f8fa-4f2d-8ea7-c9a90558365a"
+              "__type": "Sandbox.WeaponViewmodel",
+              "__guid": "aa289243-1fa9-4050-a413-780664707da6"
             }
           ]
         }
