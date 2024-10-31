@@ -8,7 +8,7 @@
       {
         "__type": "PistolWeapon",
         "__guid": "359ac6d4-3632-4bc9-bf4c-05b62837652a",
-        "WeaponViewmodel": "weapons/pistol_viewmodel.prefab",
+        "WeaponViewmodel": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
         "BoneOffset": {
           "UniformScale": 1,
           "IsValid": true,
@@ -83,7 +83,8 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "facepunch.concrete_barrier#33663"
+    "facepunch.concrete_barrier#33663",
+    "facepunch.v_usp#74471"
   ],
   "__version": 1
 }

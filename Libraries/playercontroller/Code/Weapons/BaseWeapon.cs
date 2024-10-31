@@ -9,7 +9,7 @@ public class BaseWeapon : Component
 	[Property] public CitizenAnimationHelper.HoldTypes HoldType { get; set; } = CitizenAnimationHelper.HoldTypes.HoldItem;
 	[Property] public string ParentBone { get; set; } = "hold_r";
 	[Property] public Transform BoneOffset { get; set; } = new Transform( 0 );
-	[Property] public PrefabFile WeaponViewmodel;
+	[Property] public Model WeaponViewmodel;
 
 	protected override void OnUpdate()
 	{
