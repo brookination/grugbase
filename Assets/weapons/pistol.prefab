@@ -8,7 +8,7 @@
       {
         "__type": "PistolWeapon",
         "__guid": "359ac6d4-3632-4bc9-bf4c-05b62837652a",
-        "WeaponViewmodel": "weapons/pistol_viewmodel.prefab",
+        "WeaponViewmodel": "models/weapons/sbox_pistol_usp/v_usp.vmdl",
         "BoneOffset": {
           "UniformScale": 1,
           "IsValid": true,
@@ -29,17 +29,26 @@
     ],
     "Children": [
       {
-        "__guid": "716a02c1-3073-4aa7-ae2a-cfc21424b213",
+        "__guid": "3b65238e-0bb6-41ae-948a-aed156067387",
         "Flags": 0,
-        "Name": "Object",
-        "Scale": "0.2999999,0.3,0.3",
+        "Name": "w_usp",
+        "Position": "0,0,0.03679681",
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.ModelRenderer",
-            "__guid": "d4187027-a2f8-433b-b7c9-3dfbe70ff89f",
-            "BodyGroups": 18446744073709551615,
-            "Model": "models/sbox_props/concrete_barrier/concrete_barrier.vmdl",
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "c2678153-f5e5-4ad4-be73-907adc42ae0e",
+            "BodyGroups": 9493,
+            "CreateBoneObjects": false,
+            "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
+            "Morphs": {},
+            "Parameters": {
+              "bools": {},
+              "ints": {},
+              "floats": {},
+              "vectors": {},
+              "rotations": {}
+            },
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,
@@ -47,7 +56,8 @@
               "AfterUILayer": false
             },
             "RenderType": "On",
-            "Tint": "1,1,1,1"
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
           }
         ]
       }
@@ -83,7 +93,8 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "facepunch.concrete_barrier#33663"
+    "facepunch.v_usp#74471",
+    "facepunch.w_usp#33631"
   ],
   "__version": 1
 }
