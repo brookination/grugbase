@@ -92,6 +92,9 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			else
 			{
 				Log.Warning( $"There was no bullet SFX for {tr.Surface.Sounds.Bullet}!" );
+				var handle = decalObj.PlaySound( ResourceLibrary.Get<SoundEvent>("sounds/error.sound"), 0 );
+				handle.TargetMixer = Mixer.FindMixerByName( "Game" );
+				handle.Volume = 0.5f;
 			}
 
 			// SoundHandle shootHandle = GameObject.PlaySound( pistol_shoot, 0 );
