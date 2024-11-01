@@ -3313,6 +3313,292 @@
                   "Tint": "1,1,1,1"
                 }
               ]
+            },
+            {
+              "__guid": "5b2387a7-5e45-463c-9a43-1e37d9999d40",
+              "Flags": 0,
+              "Name": "tv",
+              "Position": "-1118.545,315.5765,23.82019",
+              "Rotation": "-0.0001427531,-0.00009778142,0.8453733,-0.534176",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "6943f3f3-117b-4a32-bfe4-1322c1b075dc",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 20,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/tv/tv.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "7e5ef352-788e-4b31-ba7a-fa68836ebbb3",
+              "Flags": 0,
+              "Name": "pallet",
+              "Position": "-1182.545,315.5765,-132.9708",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "5e906d2d-4966-4d39-a490-439238ba875d",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 100,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/pallet/pallet.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "c5bc0412-c3b6-4fef-a504-153c9d9784bc",
+              "Flags": 0,
+              "Name": "tv",
+              "Position": "-1182.545,315.5765,-132.9521",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "2941bc83-cee3-40dc-a39b-70d2502429a2",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 20,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/tv/tv.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "3438b0f9-f7ab-4984-9d52-b2004274cd1c",
+              "Flags": 0,
+              "Name": "wooden_crate",
+              "Position": "-1246.545,219.5765,-132.9708",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "0679011c-2420-4610-acd3-6d06ed237881",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "cce16740-7a8e-4ae3-80ca-0d24e62e92e4",
+              "Flags": 0,
+              "Name": "wooden_crate",
+              "Position": "-1246.545,219.5765,-101.0017",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "4e2481a8-9ed3-4ec6-96d2-e2d031d7a43c",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "86ea3820-8692-4549-bb8e-c0bea170959d",
+              "Flags": 0,
+              "Name": "wooden_crate",
+              "Position": "-1246.545,219.5765,-69.03253",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "fd48fc1b-8661-4a26-a3f5-6ffa5d027004",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "e4775873-0d76-4717-9cff-9f1f3efc07ce",
+              "Flags": 0,
+              "Name": "wooden_crate",
+              "Position": "-1246.545,219.5765,-37.06339",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "469963f4-9364-4746-9ccd-177141d75f19",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "a3f13ef8-c8f4-4718-8016-e3d8a719d3cb",
+              "Flags": 0,
+              "Name": "wooden_crate (9)",
+              "Position": "-1246.545,219.5765,219.06",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "8fed8f0d-917f-4ac5-85ac-a0c9fecfdc7c",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "539da746-6e99-4ccf-b8c5-cf47778776aa",
+              "Flags": 0,
+              "Name": "wooden_crate (10)",
+              "Position": "-1246.545,219.5765,187.0909",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "3d511b1b-08d9-4a91-9948-7b6cd568274f",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "746b8026-19ae-48ee-b552-31e33287813f",
+              "Flags": 0,
+              "Name": "wooden_crate (1)",
+              "Position": "-1246.545,219.5765,154.9675",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "db88c02d-ea61-4aec-8afd-31bd707e1fd8",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "1023048d-b885-4950-9e77-a5b16ca6a833",
+              "Flags": 0,
+              "Name": "wooden_crate (2)",
+              "Position": "-1246.545,219.5765,122.9983",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "d7dc3e04-e86c-4659-a9ae-e791f4912974",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "a46e19d0-15cd-49b6-9b73-0becfe484ab5",
+              "Flags": 0,
+              "Name": "wooden_crate (3)",
+              "Position": "-1246.545,219.5765,91.02921",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "60dc3a5a-373f-4520-80d1-8aec459db042",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "f5b80f04-4afa-4cc3-b0e8-244b9ae63e2f",
+              "Flags": 0,
+              "Name": "wooden_crate (4)",
+              "Position": "-1246.545,219.5765,59.06003",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "96ddb720-268d-45e2-9139-bcb1d2051ced",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "eff0dc63-44c0-4cda-bf63-8d3dbd8415d0",
+              "Flags": 0,
+              "Name": "wooden_crate (5)",
+              "Position": "-1246.545,219.5765,27.09091",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "c626632f-b965-48a5-bc08-ad4b8255ea78",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            },
+            {
+              "__guid": "b135f625-5c51-428f-8029-0dbd38e70b00",
+              "Flags": 0,
+              "Name": "wooden_crate",
+              "Position": "-1246.545,219.5765,-5.094238",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.Prop",
+                  "__guid": "0200aac9-e301-44a1-9c98-a756cc5407ed",
+                  "BodyGroups": 18446744073709551615,
+                  "Health": 50,
+                  "IsStatic": false,
+                  "Model": "models/sbox_props/wooden_crate/wooden_crate.vmdl",
+                  "StartAsleep": false,
+                  "Tint": "1,1,1,1"
+                }
+              ]
             }
           ]
         },
@@ -3764,64 +4050,6 @@
                   "Bounds": {
                     "Mins": "-299.1005,-359.0006,-200",
                     "Maxs": "263.1996,1033.999,324.7"
-                  },
-                  "DelayBetweenUpdates": 0.1,
-                  "Feathering": 0.02,
-                  "FrameInterval": 5,
-                  "MaxDistance": 512,
-                  "MultiBounce": false,
-                  "Projection": "Box",
-                  "RenderDynamically": true,
-                  "TintColor": "1,1,1,1",
-                  "UpdateStrategy": "OnEnabled",
-                  "ZFar": 4096,
-                  "ZNear": 16
-                }
-              ]
-            },
-            {
-              "__guid": "70943544-a375-4015-9e54-04bec6e69725",
-              "Flags": 0,
-              "Name": "Envmap Probe (5)",
-              "Position": "-1502.545,123.5765,-68.97079",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.EnvmapProbe",
-                  "__guid": "7f61c3d9-3eca-4f7a-8414-aa8123ef190c",
-                  "Texture": "textures/cubemaps/default2.vtex",
-                  "Bounds": {
-                    "Mins": "-516.5005,-864.8004,-200",
-                    "Maxs": "565.5996,761.6,324.7"
-                  },
-                  "DelayBetweenUpdates": 0.1,
-                  "Feathering": 0.05,
-                  "FrameInterval": 5,
-                  "MaxDistance": 512,
-                  "MultiBounce": false,
-                  "Projection": "Box",
-                  "RenderDynamically": true,
-                  "TintColor": "1,1,1,1",
-                  "UpdateStrategy": "OnEnabled",
-                  "ZFar": 4096,
-                  "ZNear": 16
-                }
-              ]
-            },
-            {
-              "__guid": "9ccfaeda-f427-4592-9783-cff4c04b3c5e",
-              "Flags": 0,
-              "Name": "Envmap Probe (6)",
-              "Position": "-830.5449,539.5764,-68.97079",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.EnvmapProbe",
-                  "__guid": "07f7a2e9-e82d-4930-9ca9-2e8f98dd1436",
-                  "Texture": "textures/cubemaps/default2.vtex",
-                  "Bounds": {
-                    "Mins": "-299.1005,-478.2004,-200",
-                    "Maxs": "263.1996,478.2,324.7"
                   },
                   "DelayBetweenUpdates": 0.1,
                   "Feathering": 0.02,
@@ -4831,7 +5059,10 @@
     "facepunch.floor_dirt_d#57785",
     "facepunch.floor_wooden_deck_a#18687",
     "facepunch.metal_trim_clean#43482",
+    "facepunch.pallet#33622",
     "facepunch.seat_left#33709",
+    "facepunch.tv#33694",
+    "facepunch.wooden_crate#29138",
     "fpopium.wooden_planks_c#55170",
     "gbonn.concretefloor01#49285",
     "mbk.facepunch_logo#38714",
