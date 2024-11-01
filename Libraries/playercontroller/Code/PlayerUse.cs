@@ -8,6 +8,8 @@ public sealed class PlayerUse : Component
 	Rigidbody carrying;
 	Transform carryTransform;
 	Transform carryOriginalTransform;
+	
+	public bool CarryingObject => carrying != null;
 
 	public bool Interative;
 	public string TooltipIcon;

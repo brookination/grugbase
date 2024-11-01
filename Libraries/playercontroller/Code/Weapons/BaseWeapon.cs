@@ -18,6 +18,8 @@ public class BaseWeapon : Component
 		var owner = GameObject.Components.GetInAncestorsOrSelf<Player>();
 		if ( owner is null ) return;
 
+		var playerUse = owner.GetComponent<PlayerUse>();
+
 		var body = owner.Body.Components.Get<SkinnedModelRenderer>();
 		body.Set( "holdtype", (int)HoldType );
 
@@ -27,6 +29,12 @@ public class BaseWeapon : Component
 			GameObject.Parent = obj;
 			GameObject.LocalTransform = BoneOffset.WithScale( 1 );
 		}
+
+		if ( playerUse.CarryingObject )
+		{
+			return;
+		}
+		
 
 		if ( IsProxy )
 			return;
