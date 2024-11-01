@@ -1,171 +1,110 @@
-using System.Security.Cryptography;
-
 namespace Sandbox;
 
 public sealed class WeaponViewmodel : Component
 {
-	
-	[Property, ReadOnly] Player localPlayer;
-	[Property, ReadOnly] PlayerInventory inventory;
-	[Property, ReadOnly] private GameObject ViewmodelGameObject;
-	[Property, ReadOnly] private BaseWeapon? ActiveWeapon;
-	private bool ViewmodelForActiveWeapon;
+    [Property, ReadOnly] Player localPlayer;
+    [Property, ReadOnly] PlayerInventory inventory;
+    [Property, ReadOnly] private GameObject viewmodelGameObject;
+    [Property, ReadOnly] private BaseWeapon? activeWeapon;
+    private bool hasViewmodel;
 
-	// TODO: THIS FUCKING SUCKS
-	
-	protected override void OnAwake()
-	{
-		UpdateVariables();
-	}
+    protected override void OnAwake()
+    {
+        UpdatePlayerData();
+    }
 
-	void UpdateVariables()
-	{
-		if ( localPlayer == null )
-		{
-			localPlayer = Player.FindLocalPlayer();
-			Log.Info( "Finding local player..." );
-			if ( localPlayer == null )
-			{
-				Log.Error( "There is no local player (?)" );
-			}
-			else
-			{
-				Log.Info( "Local player found!" );
-			}
-		}
+    private void UpdatePlayerData()
+    {
+        localPlayer ??= Player.FindLocalPlayer();
 
-		if ( localPlayer != null )
-		{
-			inventory = localPlayer.GetComponent<PlayerInventory>();
-			if ( inventory == null )
-			{
-				Log.Error( "Local player inventory component not found!" );
-			}
+        if (localPlayer != null)
+        {
+            inventory = localPlayer.GetComponent<PlayerInventory>();
+            if (inventory == null)
+            {
+                Log.Error("Local player inventory component not found!");
+                return;
+            }
 
-			if ( inventory != null )
-			{
-				if ( inventory.ActiveWeapon != null )
-				{
-					if ( inventory.ActiveWeapon != inventory.ActiveWeapon )
-					{
-						if ( ViewmodelGameObject != null )
-						{
-							ViewmodelGameObject.DestroyImmediate();
-						}
-					}
-					ActiveWeapon = inventory.ActiveWeapon;
-					Log.Info( "We have an active weapon!" );
-					ViewmodelForActiveWeapon = false;
-				}
-			}
-		}
+            UpdateActiveWeapon();
+        }
+    }
 
-		if ( ActiveWeapon != null && ActiveWeapon.WeaponViewmodel.IsValid() )
-		{
-			Log.Info( $"Active weapon {inventory.ActiveWeapon.GetType().ToString()} has a viewmodel!" );
-			ViewmodelForActiveWeapon = true;
+    private void UpdateActiveWeapon()
+    {
+        var currentWeapon = inventory.ActiveWeapon;
 
-		}
-		else
-		{
-			ViewmodelForActiveWeapon = false;
-		}
+        if (currentWeapon != activeWeapon)
+        {
+            activeWeapon = currentWeapon;
+            DestroyViewmodel();
+            CheckViewmodel();
+        }
+    }
 
-		if ( !ViewmodelForActiveWeapon && ViewmodelGameObject != null )
-		{
-			ViewmodelGameObject.DestroyImmediate();
-		}
-		
-		Log.Info( ViewmodelForActiveWeapon );
-	}
-	
-	protected override void OnFixedUpdate()
-	{
-		if (IsProxy) return;
+    private void CheckViewmodel()
+    {
+        hasViewmodel = activeWeapon?.WeaponViewmodel.IsValid() ?? false;
 
-		UpdateVariables();
-		SpawnViewmodel();
+        if (hasViewmodel)
+        {
+            SpawnViewmodel();
+        }
+        else
+        {
+            DestroyViewmodel();
+        }
+    }
 
+    protected override void OnFixedUpdate()
+    {
+        if (IsProxy) return;
 
+        UpdatePlayerData();
+    }
 
+    private void SpawnViewmodel()
+    {
+        if (viewmodelGameObject == null)
+        {
+            viewmodelGameObject = new GameObject();
+            viewmodelGameObject.SetParent(Scene.Camera.GameObject);
+            viewmodelGameObject.LocalTransform = global::Transform.Zero;
 
+            CreateArmsAndWeaponObjects();
+        }
+    }
 
-	}
+    private void CreateArmsAndWeaponObjects()
+    {
+        var armsObject = new GameObject();
+        var weaponObject = new GameObject();
 
-	void SpawnViewmodel()
-	{
-		if ( ViewmodelGameObject == null && ViewmodelForActiveWeapon && ActiveWeapon != null)
-		{
-			ViewmodelGameObject = new GameObject();
-			ViewmodelGameObject.SetParent( Scene.Camera.GameObject );
-			ViewmodelGameObject.LocalTransform = global::Transform.Zero;
+        armsObject.SetParent(viewmodelGameObject);
+        weaponObject.SetParent(viewmodelGameObject);
 
-			var ArmsObject = new GameObject();
-			var WeaponObject = new GameObject();
-			
-			ArmsObject.SetParent( ViewmodelGameObject );
-			ArmsObject.LocalTransform = global::Transform.Zero;
-			WeaponObject.SetParent( ViewmodelGameObject );
-			WeaponObject.LocalTransform = global::Transform.Zero;
+        var armsRenderer = armsObject.AddComponent<SkinnedModelRenderer>();
+        armsRenderer.Model = Model.Load("models/first_person/first_person_arms.vmdl");
+        armsRenderer.LocalTransform = global::Transform.Zero;
 
-			var ArmsRenderer = ArmsObject.AddComponent<SkinnedModelRenderer>();
-			ArmsRenderer.Model = Model.Load( "models/first_person/first_person_arms.vmdl" );
-			
-			var WeaponRenderer = WeaponObject.AddComponent<SkinnedModelRenderer>();
-			WeaponRenderer.Model = ActiveWeapon.WeaponViewmodel;
+        var weaponRenderer = weaponObject.AddComponent<SkinnedModelRenderer>();
+        weaponRenderer.Model = activeWeapon.WeaponViewmodel;
+        weaponRenderer.LocalTransform = global::Transform.Zero;
 
-			ArmsRenderer.BoneMergeTarget = WeaponRenderer;
+        armsRenderer.BoneMergeTarget = weaponRenderer;
 
-			var controller = ViewmodelGameObject.AddComponent<ViewmodelController>();
-			controller.Target = WeaponRenderer;
-			controller.BodyController = localPlayer.GetComponent<BodyController>();
-			
-			
+        var controller = viewmodelGameObject.AddComponent<ViewmodelController>();
+        controller.Target = weaponRenderer;
+        controller.BodyController = localPlayer.GetComponent<BodyController>();
+    }
 
-
-
-		}
-	}
-	
-	/* void UpdateVariables()
-	{
-		if ( localPlayer == null )
-		{
-			localPlayer = Player.FindLocalPlayer();
-		}
-
-		if ( activeWeapon == null || localPlayer.GetComponent<PlayerInventory>().ActiveWeapon != activeWeapon )
-		{
-			activeWeapon = localPlayer.GetComponent<PlayerInventory>().ActiveWeapon;
-		}
-		
-		if ( viewmodelGameObject == null && activeWeapon.WeaponViewmodel != null )
-		{
-			SpawnViewmodel();
-		}
-
-		if ( activeWeapon.WeaponViewmodel == null && viewmodelGameObject != null )
-		{
-			viewmodelGameObject.Enabled = false;
-		}
-		if ( activeWeapon.WeaponViewmodel != null && viewmodelGameObject.Enabled == false )
-		{
-			viewmodelGameObject.Enabled = true;
-		}
-	}
-
-	void SpawnViewmodel()
-	{
-		if ( activeWeapon != null )
-		{
-			if ( activeWeapon.WeaponViewmodel != null )
-			{
-				viewmodelGameObject = SceneUtility.GetPrefabScene( activeWeapon.WeaponViewmodel ).Clone();
-				viewmodelGameObject.SetParent( Scene.Camera.GameObject );
-				viewmodelGameObject.LocalPosition = Vector3.Zero;
-				viewmodelGameObject.LocalRotation = Rotation.Identity;
-			}
-		}
-	} */ 
+    private void DestroyViewmodel()
+    {
+        if (viewmodelGameObject != null)
+        {
+            viewmodelGameObject.DestroyImmediate();
+            viewmodelGameObject = null;
+        }
+    }
 
 }
