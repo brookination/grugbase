@@ -49,7 +49,9 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				 decalObj.SetParent( tr.GameObject );
 			}
 			
-			
+			// network bullet hole
+			decalObj.NetworkMode = NetworkMode.Object;
+			decalObj.Network.AssignOwnership( Connection.Local );
 				
 			var decalRenderer = decalObj.AddComponent<DecalRenderer>();
 				
