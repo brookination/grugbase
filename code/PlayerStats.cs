@@ -58,6 +58,10 @@ public sealed class PlayerStats : Component, IPlayerEvent
 	void IPlayerEvent.OnSuicide( Player player )
 	{
 		Sandbox.Services.Stats.Increment( "suicides", 1 );
+		if ( Sandbox.Services.Stats.LocalPlayer.Get( "suicides" ).Value >= 1 )
+		{
+			Sandbox.Services.Achievements.Unlock( "game_ragdolling" );
+		}
 	}
 
 }
