@@ -8,6 +8,10 @@ public sealed class WeaponViewmodel : Component
     [Property, ReadOnly] private BaseWeapon? activeWeapon;
     private bool hasViewmodel;
 
+    // TODOS:
+    // TODO: When player dies, destroy viewmodel
+    // TODO: This suck bad 
+    
     protected override void OnAwake()
     {
         UpdatePlayerData();
@@ -16,7 +20,7 @@ public sealed class WeaponViewmodel : Component
     private void UpdatePlayerData()
     {
         localPlayer ??= Player.FindLocalPlayer();
-
+        
         if (localPlayer != null)
         {
             inventory = localPlayer.GetComponent<PlayerInventory>();
