@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 Scoreboard
 {
 	position: absolute;
@@ -5,12 +7,12 @@ Scoreboard
 	left: -1000px;
 	right: -1000px;
 	bottom: -1000px;
-	background-color: #1115;
+	background-color: rgba($inactive-background, 0.1);
 	justify-content: center;
 	align-items: center;
 	font-family: Poppins;
 	font-size: 22px;
-	color: #fff;
+	color: $secondary-color;
 	backdrop-filter: blur( 10px );
 	transform: scale( 1 );
 	transition: all 0.1s ease-out;
@@ -50,7 +52,7 @@ Scoreboard
 
 		.me
 		{
-			color: #4cff00;
+			color: $primary-color;
 		}
 	}
 

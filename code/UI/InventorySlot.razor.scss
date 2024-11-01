@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 InventorySlot
 {
     flex-direction: column;
@@ -10,7 +12,7 @@ InventorySlot
 
 InventorySlot .index
 {
-    background-color: #f701;
+    background-color: $secondary-color;
     aspect-ratio: 1;
     height: 32px;
     width: 32px;

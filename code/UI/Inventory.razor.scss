@@ -1,11 +1,11 @@
-
+@import "variables.scss";
 Inventory
 {
     position: absolute;
     left: 10vw;
     top: 10vh;
     font-size: 18px;
-    color: #f80;
+    color: $primary-color;
     gap: 8px;
     mix-blend-mode: lighten;
     transition: all 0.2s linear;

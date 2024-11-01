@@ -1,5 +1,5 @@
 
-$text-color: #f80;
+@import "variables.scss";
 
 .vitals
 {
@@ -16,10 +16,10 @@ $text-color: #f80;
 
 .health
 {
-    color: $text-color;
+    color: $primary-color;
     mix-blend-mode: lighten;
-    text-shadow: 0px 0px 6px #f506;
-    width: 100px;
+    text-shadow: 0px 0px 6px $secondary-color;
+    width: 200px;
     justify-content: flex-end;
 }
 
@@ -46,6 +46,12 @@ Hud
     {
         background-color: transparent;
     }
+}
+
+.icon {
+    font-family: "Material Icons";
+    display: flex;
+    align-items: center;
 }
 
 .jump
