@@ -19,6 +19,7 @@ public class BaseWeapon : Component
 		if ( owner is null ) return;
 
 		var playerUse = owner.GetComponent<PlayerUse>();
+		if (playerUse is null) return;
 
 		var body = owner.Body.Components.Get<SkinnedModelRenderer>();
 		body.Set( "holdtype", (int)HoldType );
