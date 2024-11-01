@@ -25,12 +25,27 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 				
 			// do a bullet hole
-			// TODO: if we've hit a skinnedmodelrenderer, attach to the bone we've hit
 			var decalObj = new GameObject();
 
 			decalObj.WorldTransform = new Transform( tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt( -tr.Normal, Vector3.Random ));
+
+			if ( tr.GameObject.GetComponent<SkinnedModelRenderer>() != null )
+			{
+				var skinned = tr.GameObject.GetComponent<SkinnedModelRenderer>();
+
+				var parentObj = skinned.GetBoneObject( tr.Bone );
 				
-			decalObj.SetParent( tr.GameObject );
+				if (parentObj != null)
+				{
+					decalObj.SetParent( parentObj );
+				}
+				else
+				{
+					decalObj.SetParent( tr.GameObject );
+				}
+			}
+			
+			
 				
 			var decalRenderer = decalObj.AddComponent<DecalRenderer>();
 				
