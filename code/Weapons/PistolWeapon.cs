@@ -44,6 +44,10 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 					decalObj.SetParent( tr.GameObject );
 				}
 			}
+			else
+			{
+				 decalObj.SetParent( tr.GameObject );
+			}
 			
 			
 				
