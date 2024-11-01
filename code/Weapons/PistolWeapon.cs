@@ -53,10 +53,18 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 			var decalRenderer = decalObj.AddComponent<DecalRenderer>();
 				
+			
 			decalObj.Tags.Add( "bullethole" );
 
-			var decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() );
-			Log.Info( decal );
+			var decal = ResourceLibrary.Get<DecalDefinition>( "decals/bullethole.decal" );
+
+			if ( tr.Surface.ImpactEffects.BulletDecal != null )
+			{
+				decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() );
+			}
+			
+			
+			// og.Info( decal );
 			
 			if ( !decal.IsValid() )
 			{
