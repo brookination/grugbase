@@ -4,6 +4,7 @@ public sealed class ViewmodelManager : Component
 {
 	public Player Player => Player.FindLocalPlayer();
 	public PlayerInventory PlayerInventory => Player.GetComponent<PlayerInventory>();
+	public PlayerUse PlayerUse => Player.GetComponent<PlayerUse>();
 	
 	public GameObject ViewmodelObject;
 	
@@ -23,6 +24,15 @@ public sealed class ViewmodelManager : Component
 			ViewmodelEnabled = false;
 		}
 
+		if ( PlayerUse.CarryingObject )
+		{
+			ViewmodelEnabled = true;
+		}
+		else
+		{
+			ViewmodelEnabled = false;
+		}
+		
 		if (!ViewmodelEnabled)
 		{
 			ViewmodelEnabled = PlayerInventory.ActiveWeapon?.WeaponViewmodel == null;
