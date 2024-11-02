@@ -25,7 +25,7 @@
     "StartupScene": "scenes/minimal.scene",
     "ProjectTemplate": null,
     "MapStartupScene": "scenes/minimal.scene",
-    "LaunchMode": "Launcher",
+    "LaunchMode": "Normal",
     "ControlModes": {
       "Keyboard": true
     }

@@ -29,7 +29,7 @@
     ],
     "Children": [
       {
-        "__guid": "716a02c1-3073-4aa7-ae2a-cfc21424b213",
+        "__guid": "3b65238e-0bb6-41ae-948a-aed156067387",
         "Flags": 0,
         "Name": "Object",
         "Scale": "1.5,1.5,1.5",
@@ -40,6 +40,7 @@
             "__guid": "d4187027-a2f8-433b-b7c9-3dfbe70ff89f",
             "BodyGroups": 9493,
             "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
+
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,
@@ -47,7 +48,8 @@
               "AfterUILayer": false
             },
             "RenderType": "On",
-            "Tint": "1,1,1,1"
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
           }
         ]
       }

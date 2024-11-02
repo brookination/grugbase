@@ -10,6 +10,9 @@ public sealed class BulletHole : Component
 
 	protected override void OnAwake()
 	{
+		
+		
+		
 		renderer = GetComponent<DecalRenderer>();
 		timeSinceCreated = 0f;
 	}

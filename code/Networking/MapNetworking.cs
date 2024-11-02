@@ -14,11 +14,18 @@ public sealed class MapNetworking : Component
 	protected override void OnAwake()
 	{
 		var props = GameObject.GetComponentsInChildren<Prop>().ToArray();
+		var skinned = GameObject.GetComponentsInChildren<SkinnedModelRenderer>().ToArray();
+
+		var obj = new GameObject(true, "Props");
 		
+		foreach ( var mdl in skinned )
+		{
+			mdl.CreateBoneObjects = true;
+		}
 
 		foreach ( var prop in props )
 		{
-			prop.GameObject.SetParent( Scene );
+			prop.GameObject.SetParent( obj );
 			prop.Tags.Add( "dynamic" );
 			prop.GameObject.NetworkMode = NetworkMode.Object;
 			prop.GameObject.Network.SetOrphanedMode( NetworkOrphaned.ClearOwner );

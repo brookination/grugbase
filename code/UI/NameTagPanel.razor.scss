@@ -1,4 +1,4 @@
-
+@import "variables.scss";
 NameTagPanel
 {
     position: absolute;
@@ -14,7 +14,7 @@ NameTagPanel
     .card
     {
         flex-direction: row;
-        background-color: #0004;
+        background-color: rgba($inactive-background,0.1);
         border-radius: 5px;
         padding: 10px 20px;
         justify-content: center;
@@ -28,13 +28,13 @@ NameTagPanel
             height: 32px;
             background-position: center;
             background-size: cover;
-            border-radius: 100px;
+            border-radius: 5px;
         }
 
         .name
         {
             font-family: Poppins;
-            color: #fff;
+            color: white;
         }
 
         .voice

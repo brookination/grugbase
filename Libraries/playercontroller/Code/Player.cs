@@ -91,6 +91,11 @@ public sealed class Player : Component, IDamageable, BodyController.IEvents
 			Health = 0;
 			Death();
 		}
+
+		if ( !Controller.Velocity.IsNearlyZero() )
+		{
+			IPlayerEvent.Post( e => e.OnPlayerMove( this, Controller.Velocity ) );
+		}
 	}
 
 	void IDamageable.OnDamage( in DamageInfo damage )

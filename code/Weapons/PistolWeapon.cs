@@ -25,19 +25,48 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 				
 				
 			// do a bullet hole
-			// TODO: if we've hit a skinnedmodelrenderer, attach to the bone we've hit
 			var decalObj = new GameObject();
 
 			decalObj.WorldTransform = new Transform( tr.HitPosition + tr.Normal * 2.0f, Rotation.LookAt( -tr.Normal, Vector3.Random ));
+
+			if ( tr.GameObject.GetComponent<SkinnedModelRenderer>() != null )
+			{
+				var skinned = tr.GameObject.GetComponent<SkinnedModelRenderer>();
+
+				var parentObj = skinned.GetBoneObject( tr.Bone );
 				
-			decalObj.SetParent( tr.GameObject );
+				if (parentObj != null)
+				{
+					decalObj.SetParent( parentObj );
+				}
+				else
+				{
+					decalObj.SetParent( tr.GameObject );
+				}
+			}
+			else
+			{
+				 decalObj.SetParent( tr.GameObject );
+			}
+			
+			// network bullet hole
+			decalObj.NetworkMode = NetworkMode.Object;
+			decalObj.Network.AssignOwnership( Connection.Local );
 				
 			var decalRenderer = decalObj.AddComponent<DecalRenderer>();
 				
+			
 			decalObj.Tags.Add( "bullethole" );
 
-			var decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() );
-			Log.Info( decal );
+			var decal = ResourceLibrary.Get<DecalDefinition>( "decals/bullethole.decal" );
+
+			if ( tr.Surface.ImpactEffects.BulletDecal != null )
+			{
+				decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() );
+			}
+			
+			
+			// og.Info( decal );
 			
 			if ( !decal.IsValid() )
 			{
@@ -65,6 +94,9 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			else
 			{
 				Log.Warning( $"There was no bullet SFX for {tr.Surface.Sounds.Bullet}!" );
+				var handle = decalObj.PlaySound( ResourceLibrary.Get<SoundEvent>("sounds/error.sound"), 0 );
+				handle.TargetMixer = Mixer.FindMixerByName( "Game" );
+				handle.Volume = 0.5f;
 			}
 
 			// SoundHandle shootHandle = GameObject.PlaySound( pistol_shoot, 0 );
