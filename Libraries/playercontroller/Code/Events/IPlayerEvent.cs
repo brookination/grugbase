@@ -13,7 +13,9 @@ public interface IPlayerEvent : ISceneEvent<IPlayerEvent>
 	void OnWeaponAdded( Player player, BaseWeapon weapon ) { }
 	void OnWeaponChanged(Player player, BaseWeapon weapon) {}
 	void OnWeaponDropped( Player player, BaseWeapon weapon ) { }
-
+	
+	void OnPlayerMove( Player player, Vector3 velocity ) { }
+	
 	void OnCameraMove( Player player, ref Angles angles ) { }
 	void OnCameraSetup( Player player, CameraComponent camera ) { }
 	void OnCameraPostSetup( Player player, CameraComponent camera ) { }
