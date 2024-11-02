@@ -20,6 +20,8 @@ public sealed class Player : Component, IDamageable, BodyController.IEvents
 	[Sync] public float Health { get; set; } = 100;
 
 	public bool IsDead => Health <= 0;
+	
+	public bool IsAlive => Health > 0;
 
 	public Transform EyeTransform => Controller.EyeTransform;
 

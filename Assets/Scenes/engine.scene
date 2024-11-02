@@ -1,5 +1,5 @@
 {
-  "__guid": "cd285893-d0ab-4423-9b5f-9a94f46ce96c",
+  "__guid": "fff4ff6b-22ae-4ef8-8a73-b50ab317aae1",
   "GameObjects": [
     {
       "__guid": "35e37ca2-47a6-42e9-b71d-65de0fcf6d9d",
@@ -115,9 +115,8 @@
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.WeaponViewmodel",
-              "__guid": "aa289243-1fa9-4050-a413-780664707da6",
-              "__enabled": false
+              "__type": "ViewmodelManager",
+              "__guid": "ad59b01a-8357-4dd1-a659-e88696ee3466"
             }
           ]
         }
