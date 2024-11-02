@@ -70,6 +70,13 @@ public sealed class PlayerStats : Component, IPlayerEvent
 		if ( Sandbox.Services.Stats.LocalPlayer.Get( "suicides" ).Value >= 1 )
 		{
 			Sandbox.Services.Achievements.Unlock( "game_ragdolling" );
+		} else if ( Sandbox.Services.Stats.LocalPlayer.Get( "suicides" ).Value >= 50 )
+		{
+			
+			Sandbox.Services.Achievements.Unlock( "game_manyragdoll" );
+		}
+		{
+			
 		}
 	}
 
