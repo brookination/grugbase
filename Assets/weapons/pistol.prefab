@@ -32,14 +32,14 @@
         "__guid": "716a02c1-3073-4aa7-ae2a-cfc21424b213",
         "Flags": 0,
         "Name": "Object",
-        "Scale": "0.2999999,0.3,0.3",
+        "Scale": "1.5,1.5,1.5",
         "Enabled": true,
         "Components": [
           {
             "__type": "Sandbox.ModelRenderer",
             "__guid": "d4187027-a2f8-433b-b7c9-3dfbe70ff89f",
-            "BodyGroups": 18446744073709551615,
-            "Model": "models/sbox_props/concrete_barrier/concrete_barrier.vmdl",
+            "BodyGroups": 9493,
+            "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,
@@ -83,8 +83,8 @@
   "DontBreakAsTemplate": false,
   "ResourceVersion": 1,
   "__references": [
-    "facepunch.concrete_barrier#33663",
-    "facepunch.v_usp#74471"
+    "facepunch.v_usp#74471",
+    "facepunch.w_usp#33631"
   ],
   "__version": 1
 }
