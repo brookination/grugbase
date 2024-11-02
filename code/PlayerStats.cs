@@ -55,6 +55,15 @@ public sealed class PlayerStats : Component, IPlayerEvent
 		Sandbox.Services.Stats.Increment( "deaths", 1 );
 	}
 
+	void IPlayerEvent.OnPlayerMove( Player player, Vector3 velocity )
+	{
+		if ( player != Player ) return;
+
+		if ( velocity.Length >= 700f )
+		{
+			Sandbox.Services.Achievements.Unlock( "game_toofast" );
+		}
+	}
 	void IPlayerEvent.OnSuicide( Player player )
 	{
 		Sandbox.Services.Stats.Increment( "suicides", 1 );
