@@ -81,7 +81,12 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			particleobj.LocalTransform = global::Transform.Zero;
 			particleobj.LocalRotation = Rotation.LookAt( decalObj.LocalTransform.Forward, tr.Normal );
 			
+			// most particle effects don't actually exist. i mean, the file's there, they're just error sprites
 			var particle = ParticleSystem.Load( "particles/impact.generic.vpcf" );
+			if ( tr.Surface.ResourceName == "metal" )
+			{
+				particle = ParticleSystem.Load( "particles/impact.metal.vpcf" );
+			}
 
 			var particleLegacy = particleobj.AddComponent<LegacyParticleSystem>();
 			
