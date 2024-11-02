@@ -64,6 +64,8 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			{
 				decal = ResourceLibrary.Get<DecalDefinition>( tr.Surface.ImpactEffects.BulletDecal.FirstOrDefault() );
 			}
+
+			
 			
 			
 			// og.Info( decal );
@@ -72,6 +74,18 @@ public sealed class PistolWeapon : BaseWeapon, IPlayerEvent
 			{
 				decal = ResourceLibrary.Get<DecalDefinition>( "decals/bullethole.decal" );
 			}
+			
+			var particleobj = new GameObject();
+			particleobj.SetParent( decalObj );
+			
+			particleobj.LocalTransform = global::Transform.Zero;
+			particleobj.LocalRotation = Rotation.LookAt( decalObj.LocalTransform.Forward, tr.Normal );
+			
+			var particle = ParticleSystem.Load( "particles/impact.generic.vpcf" );
+
+			var particleLegacy = particleobj.AddComponent<LegacyParticleSystem>();
+			
+			particleLegacy.Particles = particle;
 			
 			decalRenderer.Size = new Vector3( decalRenderer.Size.x/4, decalRenderer.Size.y/4, 16 );
 				

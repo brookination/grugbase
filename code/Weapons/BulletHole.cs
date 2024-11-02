@@ -7,7 +7,7 @@ public sealed class BulletHole : Component
 	TimeSince timeSinceCreated;
 
 	private DecalRenderer renderer;
-
+	
 	protected override void OnAwake()
 	{
 		
