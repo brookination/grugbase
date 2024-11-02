@@ -1,6 +1,6 @@
 using Sandbox;
 
-public sealed class ViewmodelController : Component, IPlayerEvent
+public sealed class ViewmodelAnimator : Component, IPlayerEvent
 {
 	[Property] public SkinnedModelRenderer Target { get; set; }
 	public BodyController BodyController { get; set; }
