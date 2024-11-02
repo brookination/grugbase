@@ -31,24 +31,16 @@
       {
         "__guid": "3b65238e-0bb6-41ae-948a-aed156067387",
         "Flags": 0,
-        "Name": "w_usp",
-        "Position": "0,0,0.03679681",
+        "Name": "Object",
+        "Scale": "1.5,1.5,1.5",
         "Enabled": true,
         "Components": [
           {
-            "__type": "Sandbox.SkinnedModelRenderer",
-            "__guid": "c2678153-f5e5-4ad4-be73-907adc42ae0e",
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "d4187027-a2f8-433b-b7c9-3dfbe70ff89f",
             "BodyGroups": 9493,
-            "CreateBoneObjects": false,
             "Model": "models/weapons/sbox_pistol_usp/w_usp.vmdl",
-            "Morphs": {},
-            "Parameters": {
-              "bools": {},
-              "ints": {},
-              "floats": {},
-              "vectors": {},
-              "rotations": {}
-            },
+
             "RenderOptions": {
               "GameLayer": true,
               "OverlayLayer": false,
