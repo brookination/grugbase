@@ -4,6 +4,8 @@ public sealed class ViewmodelAnimator : Component, IPlayerEvent
 {
 	[Property] public SkinnedModelRenderer Target { get; set; }
 	public BodyController BodyController { get; set; }
+	
+	Angles EyeAngles { get; set; }
 
 	protected override void OnAwake()
 	{
@@ -23,9 +25,25 @@ public sealed class ViewmodelAnimator : Component, IPlayerEvent
 
 	void Animate()
 	{
-		if ( Input.Pressed( "Attack1" ) )
-		{
-			Target.Set( "b_attack", true );
-		}
+		Target.Set( "b_attack", Input.Pressed( "Attack1" ) );
+		Target.Set( "b_grounded", BodyController.IsOnGround );
+		Target.Set( "b_jump", (Input.Pressed( "jump" ) && BodyController.IsOnGround) );
 	}
+	
+	
+
+	void IPlayerEvent.OnCameraMove( Player player, ref Angles angles )
+	{
+		if (Target == null || BodyController == null) return;
+		Target.Set( "aim_pitch_inertia", angles.pitch );
+		Target.Set( "aim_yaw_inertia", angles.yaw );
+		
+		
+		EyeAngles += angles;
+		EyeAngles = EyeAngles.WithPitch(EyeAngles.pitch.Clamp( -90f, 90 ));
+		EyeAngles = EyeAngles.WithRoll( 0 );
+		Target.Set( "aim_pitch", EyeAngles.pitch );
+		Target.Set( "aim_yaw", EyeAngles.yaw );
+	}
+	
 }
