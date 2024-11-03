@@ -28,6 +28,7 @@ public sealed class ViewmodelAnimator : Component, IPlayerEvent
 		Target.Set( "b_attack", Input.Pressed( "Attack1" ) );
 		Target.Set( "b_grounded", BodyController.IsOnGround );
 		Target.Set( "b_jump", (Input.Pressed( "jump" ) && BodyController.IsOnGround) );
+		Target.Set( "move_bob", BodyController.WishVelocity.Length.Remap( 0, 320f, 0, 2f ) );
 	}
 	
 	

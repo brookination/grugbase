@@ -97,7 +97,7 @@ public sealed class ViewmodelManager : Component
 			var armRenderer = armObj.AddComponent<SkinnedModelRenderer>(  );
 			var weaponRenderer = weaponObj.AddComponent<SkinnedModelRenderer>();
 
-			armRenderer.Model = Model.Load( "models/first_person/first_person_arms.vmdl" );
+			armRenderer.Model = Model.Load( "models/first_person/first_person_arms_citizen_4fingers.vmdl" );
 			weaponRenderer.Model = PlayerInventory.ActiveWeapon.WeaponViewmodel;
 
 			armRenderer.RenderOptions.Game = false;
