@@ -4,7 +4,7 @@ public sealed class ViewmodelManager : Component
 {
 	public Player Player => Player.FindLocalPlayer();
 	public PlayerInventory PlayerInventory => Player.GetComponent<PlayerInventory>();
-	public PlayerUse PlayerUse => Player.GetComponent<PlayerUse>();
+	public PlayerUse PlayerUse = null;
 	
 	public GameObject ViewmodelObject;
 	
@@ -14,6 +14,16 @@ public sealed class ViewmodelManager : Component
 
 	void CheckViewmodel()
 	{
+
+		if ( Player != null )
+		{
+			PlayerUse = Player.GetComponent<PlayerUse>();
+		}
+		else
+		{
+			PlayerUse = null;
+		}
+		
 		
 		if (Player == null || Player.IsDead)
 		{
@@ -24,7 +34,7 @@ public sealed class ViewmodelManager : Component
 			ViewmodelEnabled = false;
 		}
 
-		if ( PlayerUse.CarryingObject )
+		if ( PlayerUse == null || PlayerUse.CarryingObject )
 		{
 			ViewmodelEnabled = true;
 		}
