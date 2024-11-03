@@ -20,7 +20,7 @@
     mix-blend-mode: lighten;
     text-shadow: 0px 0px 6px $secondary-color;
     width: 200px;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 Hud
@@ -76,6 +76,7 @@ Hud
 .is-dying .vitals .health
 {
     color: red;
+    text-shadow: 0px 0px 6px darkred;
 }
 
 .is-almost-dead .vitals .health
@@ -97,18 +98,23 @@ Hud
     {
         color: #f000;
         text-shadow: 0px 0px 6px #f60a;
+        
+        transform: translate(1px,0) scale(1.30);
     }
+    
 
     50%
     {
         color: red;
         text-shadow: 0px 0px 10px #f60a;
+        transform: translate(0,1px) scale(0.9);
     }
 
     100%
     {
         color: #f000;
         text-shadow: 0px 0px 6px #f60a;
+        transform: translate(-1px,0) scale(1);
     }
 }
 
