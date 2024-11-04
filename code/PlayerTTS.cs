@@ -1,26 +1,35 @@
 using dectalkTTS;
-using Sandbox.Audio;
 
 namespace Sandbox;
 
-public class PlayerTTS : GameObjectSystem, IPlayerEvent
+public sealed class PlayerTTS : Component, IPlayerEvent
 {
-	public PlayerTTS( Scene scene ) : base( scene )
+	MusicPlayer MusicPlayer;
+	Player SpeakingPlayer;
+
+	protected override void OnUpdate()
 	{
-		
+		if (MusicPlayer !=null && SpeakingPlayer != null )
+		{
+			MusicPlayer.Position = SpeakingPlayer.WorldPosition;
+
+
+		}
 	}
 
-
-	async void IPlayerEvent.OnPlayerTalked( Player player, string talk )
+	void IPlayerEvent.OnPlayerTalked(Player player, string message )
 	{
-		
+		MusicPlayer = MusicPlayer.PlayUrl( DecTalker.GetURL( message ) );
+		SpeakingPlayer = player;
 
-		var musicPlayer = await DecTalker.Say( talk );
 
-		musicPlayer.TargetMixer = Mixer.FindMixerByName( "TTS" );
-		
-		musicPlayer.Volume = 2;
-		musicPlayer.Position = musicPlayer.Position;
-		
+		MusicPlayer.OnFinished += Disconnect;
 	}
+
+	void Disconnect()
+	{
+		MusicPlayer?.Dispose();
+		SpeakingPlayer = null;
+	}
+
 }

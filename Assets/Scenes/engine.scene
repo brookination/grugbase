@@ -219,6 +219,19 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "0527d7e5-9cce-4797-8750-0d5c0a1a926b",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "150.8334,191.6351,-51.30153",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.PlayerTTS",
+          "__guid": "53a82002-d7e8-4d73-b708-8a2a31021651"
+        }
+      ]
     }
   ],
   "SceneProperties": {
