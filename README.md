@@ -1,5 +1,5 @@
 # Grugbase
-[sbox.game](https://sbox.game/grugchamber/grugbase)
+[sbox.game](https://sbox.game/grugchamber/grugbase)          
 A game that other games can be built off of.
 
 ## Acknowledgements
