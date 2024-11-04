@@ -9,9 +9,9 @@ public static class DecTalker
 {
 	public static string Server = "https://tts.cyzon.us/tts?text=";
 	
-	static string GetURL( string input )
+	public static string GetURL( string input )
 	{
-		return Server + input;
+		return Server + input.UrlEncode();
 	}
 
 	public static async Task<string> Download( string text, string filename, BaseFileSystem fileSystem )
