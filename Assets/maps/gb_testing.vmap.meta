@@ -1,0 +1,34 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "gb_testing",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "gb_testing",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.bathtub#18870",
+        "facepunch.cable_reel_01#47583",
+        "facepunch.couch_body#29186",
+        "facepunch.oil_drum#33621",
+        "facepunch.pallet#33622",
+        "facepunch.plywood_stack#61842",
+        "facepunch.present_box#44112",
+        "facepunch.seat_left#33709",
+        "facepunch.ticket_machine#58720",
+        "facepunch.water_drum_01#47586",
+        "facepunch.waterbase_sign#33713",
+        "facepunch.weapon_crate_stacka#61261"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/gb_testing.vmap",
+        "ParentPackage": "grugchamber.grugbase"
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "Org": "grugchamber",
   "Ident": "grugbase",
   "Schema": 1,
-  "IncludeSourceFiles": false,
+  "IncludeSourceFiles": true,
   "Resources": null,
   "PackageReferences": [],
   "EditorReferences": null,
@@ -25,7 +25,7 @@
     "StartupScene": "scenes/minimal.scene",
     "ProjectTemplate": null,
     "MapStartupScene": "scenes/minimal.scene",
-    "LaunchMode": "Normal",
+    "LaunchMode": "Launcher",
     "ControlModes": {
       "Keyboard": true
     }
