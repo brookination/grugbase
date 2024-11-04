@@ -1,0 +1,14 @@
+            - name: Github Release
+  # You may pin to the exact commit or the version.
+  # uses: elgohr/Github-Release-Action@ed17bd40894fb095b2e04c56c27678482e2447d0
+  uses: elgohr/Github-Release-Action@v5
+  with:
+    # The name of the release to publish
+    title: grugbase-indev
+    # Directory of the repository that the should create the release
+    workdir: # optional
+    # The tag of the release to publish
+    tag: indev
+    # Publishes a prerelease
+    prerelease: true
+          
